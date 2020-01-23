@@ -1,0 +1,15 @@
+Package: Lab1Intro
+Type: Package
+Title: Lab 1 Intro for MATH 4793
+Version: 0.1.0
+Author: Anna Hayes
+Maintainer: Anna Hayes <anna.g.hayes99@gmail.com>
+Description: Contains course introduction material and multivariate sample mean, covariance and correlation coefficient functions
+License: MIT
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
