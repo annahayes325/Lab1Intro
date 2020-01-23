@@ -13,3 +13,5 @@ Suggests:
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/annahayes325/Lab1Intro
+BugReports: https://github.com/annahayes325/Lab1Intro/issues
