@@ -9,6 +9,6 @@
 #'
 #' @examples sammean(x)
 sammean=function(x){
-  n=nrow(x)
-  (colSums(x,dims=1))/n
+  n=nrow(x) #determine the number of observations for each variable
+  (colSums(x,dims=1))/n #sum the total observations for all variables and divide by n to get the average for each
 }
