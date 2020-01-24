@@ -24,6 +24,7 @@ samcor=function(x){
       result[col1,col2]=corlatn(i,k) #apply the correlation function to fill the empty matrix
     }
     colnames(result)=colnames(x) #add column names
+    rownames(result)=colnames(x) #add row names
   }
   result #output the filled matrix
 }
