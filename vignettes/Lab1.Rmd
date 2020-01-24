@@ -17,3 +17,47 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(Lab1Intro)
 ```
+
+#Links to Resources
+If you're interested in learning more about package-making, check out the following help by Hadley Wickham: [Documentation about package-making](http://r-pkgs.had.co.nz/).  
+For this laboratory, I created my own package, uploaded to GitHub as a public repository and found here: [My GitHub Repository Lab1Intro](https://github.com/annahayes325/Lab1Intro).
+
+#Formulae
+The following formulae are some of the fundamental formulas for determining relationships between variables in a multivariate context. They are replicated from the textbook "Applied Multivariate Statistical Analysis" by Richard Johnson and Dean Wichern. Equations (1-1), (1-4) and (1-5) involve element-wise algebra, while equations (3-27), (3-28) and (3-29) are similar equations but detail how to do so using matrix math.  
+Equation (1-1): Sample Mean  
+$$\bar{x_k}=\frac{1}{n}\sum_{j=1}^n x_{jk} \quad \textrm{where} \quad k=1,2,...,p$$
+Equation (1-4): Sample Covariance  
+$$s_{ik}=\frac{1}{n}\sum_{j=1}^n(x_{ji}-\bar{x_i})(x_{jk}-\bar{x_k})\quad \textrm{where} \quad i=1,2,...,p, \quad k=1,2,...,p$$
+Equation (1-5): Sample Correlation   $$r_{ik}=\frac{\sqrt{s_{ik}}}{\sqrt{s_{ii}}\sqrt{s_{kk}}}=\frac{\sum_{j=1}^n(x_{ji}-\bar{x_i})(x_{jk}-\bar{x_k})}{\sqrt{\sum_{j=1}^n(x_{ji}-\bar{x_i})^2}\sqrt{\sum_{j=1}^n(x_{jk}-\bar{x_k})^2}}\quad \textrm{where} \quad i=1,2,...,p, \quad k=1,2,...,p$$
+Equation (3-27): Unbiased Sample Variance-Covariance Matrix   $$\mathbf{S}=\frac{1}{n-1}\mathbf{X'}(\mathbf{I}-\frac{1}{n}\mathbf{11'}) \mathbf{X}$$
+Equation (3-28): Sample Standard Deviation Matrix  
+$$\underset{(pxp)}{\mathbf{D^{1/2}}}= \left[ {\begin{array}{cccc} \sqrt{s_{11}} & 0 &\ldots &0 \\ 0 & \sqrt{s_{22}} & \ldots &0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \ldots & \sqrt{s_{pp}} \end{array} } \right]$$
+Equation (3-29): Sample Correlation Matrix  
+$$\mathbf{R=D^{-1/2}SD^{-1/2}}$$
+
+#Apply Functions to Data
+As a part of this laboratory, I wrote functions in R for equations (1-1), (1-4) and (1-5), given above. Here, I've applied these functions to the data from Table 1.2 in the textbook by Johnson and Wichern.
+```{r}
+#Apply function sammean() to determine mean values for all variables in dataset paper.df
+Lab1Intro::sammean(paper.df)
+
+#Apply function samcov() to determine covariances between all variables in dataset paper.df
+Lab1Intro::samcov(paper.df)
+
+#Apply function samcor() to determine correlations between all variables in dataset paper.df
+Lab1Intro::samcor(paper.df)
+```
+
+#Course Assessment
+Because the laboratory is an introduction to the course, it includes basic understanding of the structure of the course. Below, the course assessment for MATH 4793 is detailed: 
+1. Clicker Quizzes: 10% Total  
+2. Assignments (4): 20% Total  
+3. Laboratories: 10% Total  
+4. Mid-Term Exams (2): 20% Total (10% Each)  
+5. Projects (2): 10% Total  
+6. Final Exam: 30% Total  
+
+
+
+
+
